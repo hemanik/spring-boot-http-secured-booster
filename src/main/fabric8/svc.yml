@@ -4,11 +4,19 @@ metadata:
   name: secured-springboot-rest
   labels:
     application: secured-springboot-rest
+    group: org.obsidiantoaster.quickstart
+    project: secured-springboot-rest
+    provider: fabric8
+    version: 1.0.0-SNAPSHOT
 spec:
   ports:
-    - protocol: TCP
+    - name: port
+      protocol: TCP
       port: 8080
       targetPort: 8080
   selector:
-    deploymentConfig: secured-springboot-rest
+    group: org.obsidiantoaster.quickstart
+    project: secured-springboot-rest
+    provider: fabric8
+    version: 1.0.0-SNAPSHOT
   type: ClusterIP

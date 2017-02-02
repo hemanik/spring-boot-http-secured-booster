@@ -4,7 +4,13 @@ metadata:
   name: secured-springboot-rest
   labels:
     application: secured-springboot-rest
+    group: org.obsidiantoaster.quickstart
+    project: secured-springboot-rest
+    provider: fabric8
+    version: 1.0.0-SNAPSHOT
 spec:
   to:
     kind: Service
     name: secured-springboot-rest
+  port:
+    targetPort: port

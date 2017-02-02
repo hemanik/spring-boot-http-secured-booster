@@ -26,7 +26,7 @@
     <artifactId>secured-springboot-rest</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
-    <name>sso</name>
+    <name>secured-springboot-rest</name>
     <description>Secured Spring Boot Tomcat - Rest &amp; Red Hat SSO</description>
 
     <properties>
