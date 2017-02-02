@@ -6,9 +6,10 @@ metadata:
     application: secured-springboot-rest
 spec:
   ports:
-    - name: port-sb
-      port: 8080
-      targetPort: 8080
+  - name: port-sb
+    port: 8080
+    targetPort: 8080
   selector:
     application: secured-springboot-rest
+    deploymentConfig: secured-springboot-rest
   type: ClusterIP

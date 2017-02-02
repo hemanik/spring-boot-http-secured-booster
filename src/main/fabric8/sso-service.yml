@@ -10,9 +10,9 @@ metadata:
     description: The web server's http port.
 spec:
   ports:
-    - name: port-sso
-      port: 8080
-      targetPort: 8080
+  - name: port-sso
+    port: 8080
+    targetPort: 8080
   selector:
     deploymentConfig: sso
   type: ClusterIP

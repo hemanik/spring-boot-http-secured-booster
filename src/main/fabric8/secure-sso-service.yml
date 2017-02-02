@@ -10,10 +10,10 @@ metadata:
     description: The web server's https port.
 spec:
   ports:
-    - name: port-secure-sso
-      port: 8443
-      targetPort: 8443
+  - name: port-secure-sso
+    port: 8443
+    targetPort: 8443
   selector:
-      application: sso
+    application: sso
     deploymentConfig: sso
   type: ClusterIP
