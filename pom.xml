@@ -23,7 +23,7 @@
       <version>21</version>
     </parent>
     <groupId>org.obsidiantoaster.quickstart</groupId>
-    <artifactId>secured-springboot-rest-parent</artifactId>
+    <artifactId>secured-springboot-rest</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
     <name>sso</name>

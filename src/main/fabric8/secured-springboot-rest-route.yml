@@ -1,0 +1,6 @@
+apiVersion: v1
+kind: Route
+spec:
+  to:
+    kind: Service
+    name: secured-springboot-rest
