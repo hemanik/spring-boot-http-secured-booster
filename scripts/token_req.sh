@@ -2,7 +2,7 @@
 
 SCRIPT_DIR="$(dirname "$0")"
 
-. $SCRIPT_DIR/../common.sh
+. $SCRIPT_DIR/common.sh
 
 #echo ">>> HTTP Token query"
 #echo "curl -sk -X POST $SSO_HOST/auth/realms/$REALM/protocol/openid-connect/token -d grant_type=password -d username=$USER -d client_secret=$SECRET -d password=$PASSWORD -d client_id=$CLIENT_ID"
@@ -14,6 +14,7 @@ access_token=$(echo -e "$auth_result" | awk -F"," '{print $1}' | awk -F":" '{pri
 #echo $access_token
 
 echo ">>> Greeting"
+echo "curl -k $APP/greeting -H \"Authorization:Bearer $access_token\""
 curl -k $APP/greeting -H "Authorization:Bearer $access_token"
 
 echo ">>> Greeting Customized Message"
