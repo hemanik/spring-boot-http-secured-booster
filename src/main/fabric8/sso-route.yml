@@ -13,3 +13,5 @@ spec:
   host: "${SSO_HOSTNAME_HTTP}"
   to:
     name: sso
+  port:
+    targetPort: port-sso

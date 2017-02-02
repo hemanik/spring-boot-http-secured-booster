@@ -13,5 +13,7 @@ spec:
   host: "${SSO_HOSTNAME_HTTPS}"
   to:
     name: secure-sso
+  port:
+    targetPort: port-secure-sso
   tls:
     termination: passthrough
