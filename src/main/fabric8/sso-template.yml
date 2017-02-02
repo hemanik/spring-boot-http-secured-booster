@@ -1,3 +1,4 @@
+---
 kind: Template
 apiVersion: v1
 metadata:
@@ -137,4 +138,3 @@ objects:
   kind: Service
   metadata:
     name: dummy
-
