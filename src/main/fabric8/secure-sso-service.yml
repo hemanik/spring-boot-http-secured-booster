@@ -1,12 +1,6 @@
 ---
 kind: Service
 apiVersion: v1
-spec:
-  ports:
-  - port: 8443
-    targetPort: 8443
-  selector:
-    deploymentConfig: sso
 metadata:
   name: secure-sso
   labels:
@@ -14,3 +8,12 @@ metadata:
     component: server
   annotations:
     description: The web server's https port.
+spec:
+  ports:
+    - name: port-secure-sso
+      port: 8443
+      targetPort: 8443
+  selector:
+      application: sso
+    deploymentConfig: sso
+  type: ClusterIP

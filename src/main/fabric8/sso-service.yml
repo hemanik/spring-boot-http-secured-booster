@@ -1,12 +1,6 @@
 ---
 kind: Service
 apiVersion: v1
-spec:
-  ports:
-  - port: 8080
-    targetPort: 8080
-  selector:
-    deploymentConfig: sso
 metadata:
   name: sso
   labels:
@@ -14,3 +8,11 @@ metadata:
     component: server
   annotations:
     description: The web server's http port.
+spec:
+  ports:
+    - name: port-sso
+      port: 8080
+      targetPort: 8080
+  selector:
+    deploymentConfig: sso
+  type: ClusterIP
