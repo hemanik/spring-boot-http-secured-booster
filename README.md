@@ -89,7 +89,7 @@ In order to build and deploy this project, you must have an account on an OpenSh
 1. Build the quickstart.
 
     ```
-    mvn clean install -Popenshift
+    mvn clean install
     ```
 
 # Deploy the Application
