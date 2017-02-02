@@ -13,4 +13,4 @@ spec:
     kind: Service
     name: secured-springboot-rest
   port:
-    targetPort: port
+    targetPort: port-sb
