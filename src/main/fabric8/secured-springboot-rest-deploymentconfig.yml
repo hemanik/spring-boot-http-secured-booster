@@ -35,13 +35,16 @@ spec:
         livenessProbe:
           httpGet:
             path: /health
-            port: 8081
+            port: 8080
             scheme: HTTP
           initialDelaySeconds: 180
         name: secured-springboot-rest
         ports:
-        - containerPort: 8081
+        - containerPort: 8080
           name: http
+          protocol: TCP
+        - containerPort: 9779
+          name: prometheus
           protocol: TCP
         - containerPort: 8778
           name: jolokia
@@ -49,7 +52,7 @@ spec:
         readinessProbe:
           httpGet:
             path: /health
-            port: 8081
+            port: 8080
             scheme: HTTP
           initialDelaySeconds: 10
         securityContext:

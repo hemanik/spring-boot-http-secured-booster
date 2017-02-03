@@ -15,5 +15,5 @@ spec:
     targetPort: 8443
   selector:
     application: sso
-    deploymentConfig: sso
+    deploymentconfig: sso
   type: ClusterIP

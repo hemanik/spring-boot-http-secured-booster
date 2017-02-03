@@ -11,13 +11,10 @@ spec:
       timeoutSeconds: 10800
     type: Rolling
   replicas: 1
-  selector:
-    deploymentConfig: sso
   template:
     metadata:
       name: sso
       labels:
-        deploymentConfig: sso
         application: sso
         component: server
     spec:
